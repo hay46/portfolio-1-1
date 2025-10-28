@@ -1,0 +1,59 @@
+*{
+    margin: 0px;
+    padding: 0px;
+
+}
+.div-signup{
+    width: 30%;
+    display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+padding: 10px;
+margin: auto;
+margin-top: 10px;
+}
+
+.signup-page h1{
+  font-size: 30px;
+ padding: 10px;
+ color: rgb(241, 241, 234);
+
+}
+.div-form form input
+
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+   margin: 10px;
+    padding: 14px;
+    
+}
+.div-signup-login{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    gap: 70px;
+}
+.div-signup-login h1{
+    color: rgb(245, 244, 244);
+   border: 2px solid;
+   font-size: 25px;
+    background-color: black;
+   
+}
+.div-signup-login h1:hover{
+    background-color: rgb(7, 11, 7);
+}
+.div-signup-login h2{
+     color: rgb(255, 255, 245);
+   border: 2px solid;
+   font-size: 25px;
+   background-color: rgb(33, 8, 8);
+}
+.div-signup-login h2:hover{
+    background-color: rgb(5, 247, 17);
+}
