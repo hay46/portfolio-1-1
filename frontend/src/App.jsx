@@ -1,9 +1,9 @@
 import React from "react";
-import Header from "./component/Header/Header.jsx";
-import About from "./component/About/About.jsx";
+import Header from "./component/header/Header.jsx"
+import About from "./component/about/About.jsx"
 import Home from "./component/home/Home.jsx";
 import Portfolio from "./component/portfolio/Portfolio.jsx";
-import Contact from "./component/Contact/Contact.jsx";
+import Contact from "./component/contact/Contact.jsx"
 import Service from "./component/service/Service.jsx";
 import "./App.css";
 
