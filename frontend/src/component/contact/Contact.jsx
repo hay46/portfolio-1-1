@@ -8,6 +8,8 @@ function Contact() {
     password: "",
   });
 
+  const [contacts, setContacts] = useState([]); // store saved contacts
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -24,9 +26,15 @@ function Contact() {
 
       const data = await response.json();
       alert(data.message);
-      console.log(" Saved Contact:", data);
+      console.log("Saved Contact:", data);
+
+      // Add new contact to state
+      setContacts([...contacts, data]);
+
+      // Clear the form
+      setFormData({ name: "", email: "", password: "" });
     } catch (error) {
-      console.error(" Error:", error);
+      console.error("Error:", error);
       alert("Failed to save contact. Check server connection.");
     }
   };
@@ -62,6 +70,18 @@ function Contact() {
           />
           <button type="submit">Submit</button>
         </form>
+
+        {/* Display saved contacts */}
+        <div className="saved-contacts">
+          <h2>Saved Contacts</h2>
+          <ul>
+            {contacts.map((c) => (
+              <li key={c.contact_id}>
+                {c.name} - {c.email}
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
