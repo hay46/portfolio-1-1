@@ -45,7 +45,7 @@ function Portfolio() {
       <div className="portfolio-contact">
         <h2>📞 Contact Me</h2>
         <p>
-          <strong>Email:</strong> youremail@example.com
+          <strong>Email:</strong> haymanotebabu2@gmail.com
           <br />
           <strong>GitHub:</strong>{" "}
           <a
