@@ -47,12 +47,13 @@ function Portfolio() {
         <p>
           <strong>Email:</strong> haymanotebabu2@gmail.com
           <br />
-          <strong>GitHub:</strong>{" "}
           <a
-            href="https://github.com/hay46"
+            href="https://haymanotebabu2@gmail.com"
             target="_blank"
             rel="noreferrer"
-          >
+          ></a>
+          <strong>GitHub:</strong>{" "}
+          <a href="https://github.com/hay46" target="_blank" rel="noreferrer">
             github.com/hay46
           </a>
         </p>
