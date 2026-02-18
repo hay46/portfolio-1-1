@@ -1,132 +1,130 @@
-/* === Reset === */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* --- Base Variables --- */
+:root {
+  --primary-color: #6366f1; /* Modern Indigo */
+  --text-main: #1f2937;
+  --text-muted: #6b7280;
+  --bg-glass: rgba(255, 255, 255, 0.8);
+  --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* === Header Container === */
+/* --- Header Container --- */
 .header {
-  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
+  width: 100%;
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 1rem 2.5rem;
-  background: linear-gradient(90deg, #e91e63, #ff6f61); /* pink-red gradient */
-  color: #fff;
-  transition: all 0.4s ease;
+  align-items: center;
+  padding: 1.5rem 8%;
   z-index: 1000;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: var(--transition);
+  background: transparent;
 }
 
-/* Header changes when scrolled */
+/* Scrolled State (Glass Effect) */
 .header.scrolled {
-  background: linear-gradient(90deg, #ff512f, #dd2476);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 1rem 8%;
+  background: var(--bg-glass);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-/* === Logo === */
+/* --- Logo --- */
 .logo {
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   font-weight: 800;
+  letter-spacing: -1px;
   cursor: pointer;
-  color: #fff;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  transition: transform 0.3s ease, color 0.3s ease;
+  color: var(--primary-color);
+  transition: var(--transition);
 }
 
 .logo:hover {
-  transform: scale(1.1);
-  color: #ffe082;
+  transform: scale(1.05);
 }
 
-/* === Navigation Links === */
+/* --- Desktop Navigation --- */
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 2rem;
-  transition: all 0.3s ease;
+  gap: 2.5rem;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li {
-  cursor: pointer;
   font-weight: 500;
-  color: #fff;
+  font-size: 0.95rem;
+  color: var(--text-main);
+  cursor: pointer;
   position: relative;
-  transition: color 0.3s ease;
+  transition: var(--transition);
 }
 
-/* Hover underline animation */
+.nav-links li:hover {
+  color: var(--primary-color);
+}
+
+/* Animated Underline for Active Link */
 .nav-links li::after {
   content: "";
   position: absolute;
-  left: 0;
   bottom: -5px;
+  left: 0;
   width: 0%;
   height: 2px;
-  background: #ffe082;
-  transition: width 0.3s ease;
+  background: var(--primary-color);
+  transition: var(--transition);
 }
 
-.nav-links li:hover::after,
-.nav-links li.active::after {
+.nav-links li.active {
+  color: var(--primary-color);
+}
+
+.nav-links li.active::after,
+.nav-links li:hover::after {
   width: 100%;
 }
 
-.nav-links li:hover,
-.nav-links li.active {
-  color: #ffe082;
-}
-
-/* === Mobile Menu Button === */
+/* --- Mobile Toggle Button --- */
 .nav-toggle {
   display: none;
   background: none;
   border: none;
   cursor: pointer;
-  color: #fff;
-  transition: transform 0.3s ease;
+  color: var(--text-main);
+  z-index: 1100;
 }
 
-.nav-toggle:hover {
-  transform: rotate(90deg);
-}
-
-/* === Mobile Styles === */
+/* --- Mobile Responsiveness --- */
 @media (max-width: 768px) {
   .nav-toggle {
     display: block;
   }
 
   .nav-links {
-    position: absolute;
-    top: 70px;
-    right: 0;
-    width: 220px;
-    background: linear-gradient(160deg, #e91e63, #ff6f61);
+    position: fixed;
+    top: 0;
+    right: -100%; /* Hidden by default */
+    height: 100vh;
+    width: 70%;
+    background: white;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    gap: 1.5rem;
-    padding: 2rem 0;
-    border-radius: 0 0 12px 12px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    opacity: 0;
-    pointer-events: none;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
+    transition: 0.4s ease-in-out;
   }
 
   .nav-links.open {
-    opacity: 1;
-    pointer-events: all;
-    transform: translateY(0);
+    right: 0;
   }
 
   .nav-links li {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
   }
 }
