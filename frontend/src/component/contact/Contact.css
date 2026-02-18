@@ -1,144 +1,43 @@
-/* Contact.css */
+.div-form {
+  max-width: 600px;
+  background: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
 
-/* Overall page layout */
-.div-signup {
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f9f9;
-  min-height: 100vh;
-  padding: 20px;
+  gap: 15px;
 }
 
-/* Page header */
-.signup-page h1 {
-  color: #333;
-  margin-bottom: 20px;
-  text-align: center;
-}
-
-/* Form container */
-.div-form {
-  background-color: #fff;
-  padding: 30px 40px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  width: 100%;
-  max-width: 500px;
-}
-
-/* Input fields */
-.div-form input {
-  width: 100%;
-  padding: 12px 15px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
+form input {
+  padding: 15px;
+  border: 1px solid #e2e8f0;
   border-radius: 8px;
-  font-size: 16px;
-  transition: border-color 0.3s;
-}
-
-.div-form input:focus {
-  border-color: #007bff;
   outline: none;
+  font-size: 1rem;
 }
 
-/* Buttons */
-.div-form button {
-  padding: 12px 20px;
-  margin-right: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-size: 16px;
-  transition: background-color 0.3s;
+form input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
 }
 
-.div-form button:hover {
-  background-color: #0056b3;
-}
-
-.div-form button:disabled {
-  background-color: #aaa;
-  cursor: not-allowed;
-}
-
-/* Cancel button */
-.div-form button[type="button"] {
-  background-color: #6c757d;
-}
-
-.div-form button[type="button"]:hover {
-  background-color: #5a6268;
-}
-
-/* Saved contacts container */
 .saved-contacts {
-  margin-top: 30px;
-}
-
-.saved-contacts h2 {
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.saved-contacts ul {
-  list-style: none;
-  padding: 0;
+  margin-top: 50px;
+  border-top: 2px solid #f1f5f9;
+  padding-top: 20px;
 }
 
 .saved-contacts li {
+  list-style: none;
+  background: #f8fafc;
+  margin-bottom: 10px;
+  padding: 15px;
+  border-radius: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f1f1f1;
-  margin-bottom: 10px;
-  padding: 10px 15px;
-  border-radius: 8px;
-  font-size: 16px;
-}
-
-.saved-contacts li button {
-  margin-left: 10px;
-  font-size: 14px;
-  padding: 6px 10px;
-}
-
-/* Edit button style */
-.saved-contacts li button:first-of-type {
-  background-color: #28a745;
-  color: #fff;
-}
-
-.saved-contacts li button:first-of-type:hover {
-  background-color: #218838;
-}
-
-/* Delete button style */
-.saved-contacts li button:last-of-type {
-  background-color: #dc3545;
-  color: #fff;
-}
-
-.saved-contacts li button:last-of-type:hover {
-  background-color: #c82333;
-}
-
-/* Responsive adjustments */
-@media (max-width: 600px) {
-  .div-form {
-    padding: 20px;
-  }
-
-  .saved-contacts li {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .saved-contacts li button {
-    margin: 5px 0 0 0;
-  }
 }

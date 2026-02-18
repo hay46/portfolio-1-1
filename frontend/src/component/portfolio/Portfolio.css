@@ -1,186 +1,26 @@
-/* ===== Reset ===== */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
-  background: #181a18;
-  color: #222;
-}
-
-/* ===== Portfolio Section ===== */
-.portfolio-section {
-  width: 100%;
-  min-height: 100vh;
-  padding: 6rem 10%;
-  background: linear-gradient(135deg, #ffffff, #f0f4f8);
-  text-align: center;
-}
-
-/* Title */
-.portfolio-title {
-  font-size: 3.5rem;
-  font-weight: 800;
-  color: #ffffff;
-  margin-bottom: 1rem;
-  position: relative;
-}
-
-.portfolio-title::after {
-  content: "";
-  display: block;
-  width: 120px;
-  height: 4px;
-  margin: 1rem auto 2.5rem auto;
-  background: #007bff;
-  border-radius: 5px;
-}
-
-/* Intro paragraph */
-.portfolio-intro {
-  font-size: 1.3rem;
-  color: #ffffff;
-  margin-bottom: 5rem;
-  max-width: 750px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.9;
-}
-
-/* ===== Skills Grid ===== */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 3rem;
-  margin-bottom: 5rem;
+  gap: 25px;
+  margin-top: 40px;
 }
 
-/* Skill Cards */
 .skill-card {
-  background: #0c0b0b;
-  padding: 2.5rem 2rem;
-  border-radius: 1.5rem;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
-  cursor: default;
+  background: var(--white);
+  padding: 40px;
+  border-radius: 20px;
+  transition: 0.4s;
+  border: 1px solid #e2e8f0;
 }
 
 .skill-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
-  background: #121213;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.05);
+  border-color: var(--primary);
 }
 
-/* Icons */
 .skill-card .icon {
-  font-size: 3.5rem;
-  color: #007bff;
-  margin-bottom: 1.5rem;
-  transition: transform 0.3s ease, color 0.3s ease;
+  font-size: 2.5rem;
+  color: var(--primary);
+  margin-bottom: 20px;
 }
-
-.skill-card:hover .icon {
-  transform: scale(1.2);
-  color: #0056b3;
-}
-
-/* Skill title */
-.skill-card h2 {
-  font-size: 1.7rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #ffffff;
-}
-
-/* Skill description */
-.skill-card p {
-  font-size: 1.05rem;
-  color: #555;
-  line-height: 1.7;
-}
-
-/* ===== Contact Section ===== */
-.portfolio-contact {
-  margin-top: 3rem;
-  background: #0d0c0c;
-  padding: 2.5rem 2rem;
-  border-radius: 1.5rem;
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
-  text-align: center;
-}
-
-.portfolio-contact h2 {
-  font-size: 2rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-  color: #007bff;
-}
-
-.portfolio-contact p {
-  font-size: 1.05rem;
-  line-height: 1.8;
-  color: #555;
-}
-
-.portfolio-contact a {
-  color: #ff6f61;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.portfolio-contact a:hover {
-  color: #ff3f2e;
-}
-
-/* ===== Responsive ===== */
-@media (max-width: 900px) {
-  .portfolio-section {
-    padding: 4rem 5%;
-  }
-
-  .portfolio-title {
-    font-size: 2.8rem;
-  }
-
-  .portfolio-intro {
-    font-size: 1.15rem;
-  }
-
-  .skill-card h2 {
-    font-size: 1.5rem;
-  }
-
-  .skill-card p {
-    font-size: 1rem;
-  }
-
-  .portfolio-contact h2 {
-    font-size: 1.7rem;
-  }
-}
-
-@media (max-width: 500px) {
-  .skills-grid {
-    gap: 2rem;
-  }
-
-  .skill-card {
-    padding: 2rem 1.5rem;
-  }
-
-  .portfolio-intro {
-    font-size: 1rem;
-  }
-
-  .skill-card h2 {
-    font-size: 1.3rem;
-  }
-
-  .portfolio-contact h2 {
-    font-size: 1.5rem;
-  }
-}
-
