@@ -35,10 +35,10 @@ body {
 .About-me h1::after {
   content: "";
   position: absolute;
-  bottom: -12px;
+  bottom: -13px;
   left: 50%;
   width: 100px;
-  height: 4px;
+  height: 5px;
   background: #ff6f61;
   transform: translateX(-50%);
   border-radius: 5px;
