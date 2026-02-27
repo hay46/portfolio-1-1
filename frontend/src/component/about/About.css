@@ -35,13 +35,13 @@ body {
 .About-me h1::after {
   content: "";
   position: absolute;
-  bottom: -13px;
+  bottom: -12px;
   left: 50%;
   width: 100px;
   height: 5px;
   background: #ff6f61;
   transform: translateX(-50%);
-  border-radius: 5px;
+  border-radius: 6px;
 }
 
 /* ===== Image & Description ===== */
