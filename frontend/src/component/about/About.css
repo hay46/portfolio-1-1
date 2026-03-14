@@ -71,12 +71,12 @@ body {
 
 .resilient-web {
   flex: 1;
-  font-size: 1.1rem;
-  line-height: 1.9;
+  font-size: 1.2rem;
+  line-height: 1.8;
   color: #333;
   max-width: 651px;
   background: rgba(255, 255, 255, 0.95);
-  padding: 2rem;
+  padding: 2.1rem;
   border-radius: 1.2rem;
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, background 0.3s ease;
